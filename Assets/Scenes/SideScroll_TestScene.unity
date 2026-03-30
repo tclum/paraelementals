@@ -3688,6 +3688,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5843585339305579717, guid: baceacc3321e04b579e306035df50983, type: 3}
+      propertyPath: _maxHealth
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8556353712509373501, guid: baceacc3321e04b579e306035df50983, type: 3}
       propertyPath: m_Name
       value: Boss 1

@@ -102,6 +102,9 @@ public class SideScrollEnemyController : MonoBehaviour
         _isDead = true;
         _rb.linearVelocity = Vector2.zero;
 
+        if (LevelManager.Instance != null)
+            LevelManager.Instance.RegisterEnemyKill();
+
         LootDropper lootDropper = GetComponent<LootDropper>();
         if (lootDropper != null)
         {
