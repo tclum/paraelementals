@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SideScroll_TestScene.unity
     guid: 3821037d56041438192fe27379ccd874
   - enabled: 1
+    path: Assets/Scenes/HomeBase.unity
+    guid: 2c19c8386fe1b42b3a962cc0c044bebf
+  - enabled: 1
     path: Assets/TestScene.unity
     guid: 3d822c16e0f324aed9f6aa398ab6322a
   - enabled: 1

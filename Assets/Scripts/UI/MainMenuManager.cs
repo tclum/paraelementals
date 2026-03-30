@@ -62,23 +62,24 @@ public class MainMenuManager : MonoBehaviour
             _fadePanel.alpha = 0f;
     }
 
-    private void OnPlayClicked()
+    public void OnPlayClicked()
     {
+        Debug.Log("[MainMenu] Play clicked — loading: " + _gameSceneName);
         StartCoroutine(LoadSceneWithFade(_gameSceneName));
     }
 
-    private void OnCreditsClicked()
+    public void OnCreditsClicked()
     {
         if (_mainPanel != null) _mainPanel.SetActive(false);
         if (_creditsPanel != null) _creditsPanel.SetActive(true);
     }
 
-    private void OnCreditsBack()
+    public void OnCreditsBack()
     {
         ShowMainPanel();
     }
 
-    private void OnQuitClicked()
+    public void OnQuitClicked()
     {
         Application.Quit();
         #if UNITY_EDITOR
