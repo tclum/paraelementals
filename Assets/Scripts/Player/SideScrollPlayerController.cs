@@ -35,6 +35,8 @@ public class SideScrollPlayerController : MonoBehaviour
     {
         _moveInput = 0f;
 
+        UpdateGroundedState();
+
         if (Keyboard.current != null)
         {
             if (Keyboard.current.aKey.isPressed) _moveInput -= 1f;
@@ -46,7 +48,6 @@ public class SideScrollPlayerController : MonoBehaviour
             }
         }
 
-        UpdateGroundedState();
         UpdateFacing();
     }
 
