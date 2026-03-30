@@ -2524,7 +2524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d61b87ab865441d59d53bc3d866a388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HomeBaseManager
-  _dungeonSceneName: SideScroll_TestScene
+  _dungeonSceneName: DungeonSelect
   _craftingPanel: {fileID: 851805246}
   _storagePanel: {fileID: 59701939}
   _shopPanel: {fileID: 175833198}

@@ -1788,7 +1788,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1246213181}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 102900000, guid: 2c19c8386fe1b42b3a962cc0c044bebf, type: 3}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1246213181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2973,7 +2985,7 @@ MonoBehaviour:
   _mainMenuButton: {fileID: 1802634286}
   _fadeInDuration: 1
   _mainMenuScene: MainMenu
-  _nextScene: 
+  _nextScene: HomeBase
 --- !u!225 &1973451533
 CanvasGroup:
   m_ObjectHideFlags: 0
