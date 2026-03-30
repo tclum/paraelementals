@@ -14,15 +14,22 @@ public class SideScrollPlayerRespawn : MonoBehaviour
 
     private void HandleDeath()
     {
-        Debug.Log("Player died - restarting scene");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Debug.Log("Player died.");
+
+        if (DeathScreen.Instance != null)
+        {
+            DeathScreen.Instance.ShowDeathScreen();
+        }
+        else
+        {
+            // Fallback if no death screen in scene
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     private void OnDestroy()
     {
         if (_health != null)
-        {
             _health.Died -= HandleDeath;
-        }
     }
 }
