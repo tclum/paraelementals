@@ -9,7 +9,8 @@ public class HomeBaseInteractable : MonoBehaviour
         CraftingStation,
         ItemStorage,
         Shop,
-        SkillUpgrade
+        SkillUpgrade,
+        CharacterSelect
     }
 
     [Header("Settings")]
@@ -47,24 +48,31 @@ public class HomeBaseInteractable : MonoBehaviour
 
     private void Interact()
     {
-        if (HomeBaseManager.Instance == null) return;
-
         switch (_type)
         {
             case InteractableType.DungeonPortal:
-                HomeBaseManager.Instance.EnterDungeon();
+                if (HomeBaseManager.Instance != null)
+                    HomeBaseManager.Instance.EnterDungeon();
                 break;
             case InteractableType.CraftingStation:
-                HomeBaseManager.Instance.OpenCrafting();
+                if (HomeBaseManager.Instance != null)
+                    HomeBaseManager.Instance.OpenCrafting();
                 break;
             case InteractableType.ItemStorage:
-                HomeBaseManager.Instance.OpenStorage();
+                if (HomeBaseManager.Instance != null)
+                    HomeBaseManager.Instance.OpenStorage();
                 break;
             case InteractableType.Shop:
-                HomeBaseManager.Instance.OpenShop();
+                if (HomeBaseManager.Instance != null)
+                    HomeBaseManager.Instance.OpenShop();
                 break;
             case InteractableType.SkillUpgrade:
-                HomeBaseManager.Instance.OpenSkills();
+                if (HomeBaseManager.Instance != null)
+                    HomeBaseManager.Instance.OpenSkills();
+                break;
+            case InteractableType.CharacterSelect:
+                if (CharacterSelectManager.Instance != null)
+                    CharacterSelectManager.Instance.Open();
                 break;
         }
     }
