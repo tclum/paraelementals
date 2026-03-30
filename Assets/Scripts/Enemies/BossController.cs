@@ -143,6 +143,9 @@ public class BossController : MonoBehaviour
         _rb.linearVelocity = Vector2.zero;
         _currentPhase = BossPhase.Dead;
 
+        if (LevelManager.Instance != null)
+            LevelManager.Instance.RegisterEnemyKill();
+
         Debug.Log("[Boss] Defeated!");
         OnBossDefeated?.Invoke();
 
