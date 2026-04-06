@@ -107,9 +107,7 @@ public class SideScrollEnemyController : MonoBehaviour
 
         LootDropper lootDropper = GetComponent<LootDropper>();
         if (lootDropper != null)
-        {
             lootDropper.DropLoot();
-        }
 
         Destroy(gameObject);
     }

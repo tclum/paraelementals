@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 2143066280418121619}
   - component: {fileID: 5138232651501988457}
   - component: {fileID: 1062876026989627993}
-  - component: {fileID: 5681434736293342426}
+  - component: {fileID: -4892162606987354080}
   m_Layer: 0
   m_Name: EnemyBaddie
   m_TagString: Untagged
@@ -223,7 +223,7 @@ MonoBehaviour:
   _contactDamage: 1
   _attackCooldown: 1
   _visualRoot: {fileID: 700362356171907211}
---- !u!114 &5681434736293342426
+--- !u!114 &-4892162606987354080
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -235,8 +235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b97fd44a78ba40a8ad1085bd4441324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LootDropper
-  _pickupPrefab: {fileID: 3759068417229546609, guid: d54bf07f50a8541e797cf8c805b2f6d2, type: 3}
-  _lootTable:
-  - Item: {fileID: 11400000, guid: a63e58adaa13941fcb6444b7512e7463, type: 2}
-    Amount: 2
-    DropChance: 0
+  _pickupPrefab: {fileID: 0}
+  _lootTable: []
+  _shardPrefab: {fileID: 6546429902810510527, guid: 3c85e7b08389b44ca9e51547fe29f7d2, type: 3}
+  _minShards: 1
+  _maxShards: 3
+  _shardBurstCount: 2

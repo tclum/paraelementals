@@ -103,9 +103,9 @@ GameObject:
   - component: {fileID: 7405169465062460453}
   - component: {fileID: 1468338910261838416}
   - component: {fileID: 5843585339305579717}
-  - component: {fileID: 6610898262581227988}
   - component: {fileID: 1064178764436377235}
   - component: {fileID: 119638674918863693}
+  - component: {fileID: -7118680307566671906}
   m_Layer: 0
   m_Name: Boss 1
   m_TagString: Untagged
@@ -206,23 +206,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   _maxHealth: 20
---- !u!114 &6610898262581227988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8556353712509373501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b97fd44a78ba40a8ad1085bd4441324, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LootDropper
-  _pickupPrefab: {fileID: 3759068417229546609, guid: d54bf07f50a8541e797cf8c805b2f6d2, type: 3}
-  _lootTable:
-  - Item: {fileID: 11400000, guid: a63e58adaa13941fcb6444b7512e7463, type: 2}
-    Amount: 2
-    DropChance: 0
 --- !u!114 &1064178764436377235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,3 +290,24 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7118680307566671906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8556353712509373501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b97fd44a78ba40a8ad1085bd4441324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LootDropper
+  _pickupPrefab: {fileID: 3759068417229546609, guid: cf4b55a7647aa47928f6a5ba48b62f98, type: 3}
+  _lootTable:
+  - Item: {fileID: 11400000, guid: a63e58adaa13941fcb6444b7512e7463, type: 2}
+    Amount: 1
+    DropChance: 0.5
+  _shardPrefab: {fileID: 6546429902810510527, guid: 3c85e7b08389b44ca9e51547fe29f7d2, type: 3}
+  _minShards: 15
+  _maxShards: 25
+  _shardBurstCount: 5
