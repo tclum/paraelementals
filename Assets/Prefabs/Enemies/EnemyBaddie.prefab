@@ -105,6 +105,8 @@ GameObject:
   - component: {fileID: 5138232651501988457}
   - component: {fileID: 1062876026989627993}
   - component: {fileID: -4892162606987354080}
+  - component: {fileID: -988287434784541447}
+  - component: {fileID: 5027294166995227547}
   m_Layer: 0
   m_Name: EnemyBaddie
   m_TagString: Untagged
@@ -241,3 +243,37 @@ MonoBehaviour:
   _minShards: 1
   _maxShards: 3
   _shardBurstCount: 2
+--- !u!114 &-988287434784541447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8524080338194335667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eacff43c31c54506abbd8542a0df6d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalEntity
+  _element: 4
+--- !u!114 &5027294166995227547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8524080338194335667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 564eec5fd43c24a1ab677d679699b2fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElementalStatus
+  _burnDamagePerTick: 1
+  _burnTickRate: 0.5
+  _burnDuration: 3
+  _slowAmount: 0.5
+  _slowDuration: 3
+  _stunDuration: 1
+  _shockAmount: 0.5
+  _shockDuration: 3
+  _knockbackForce: 8

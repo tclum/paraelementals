@@ -23,20 +23,15 @@ public class SideScrollPlayerCombat : MonoBehaviour
         UpdateHitboxPosition();
 
         if (Keyboard.current != null && Keyboard.current.jKey.wasPressedThisFrame)
-        {
             TryAttack();
-        }
 
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
-        {
             TryAttack();
-        }
     }
 
     private void UpdateHitboxPosition()
     {
-        if (_attackPivot == null || _controller == null)
-            return;
+        if (_attackPivot == null || _controller == null) return;
 
         Vector3 localPos = _attackPivot.localPosition;
         localPos.x = _controller.FacingRight ? Mathf.Abs(_attackOffsetX) : -Mathf.Abs(_attackOffsetX);
@@ -45,11 +40,8 @@ public class SideScrollPlayerCombat : MonoBehaviour
 
     private void TryAttack()
     {
-        if (_isAttacking)
-            return;
-
-        if (Time.time < _lastAttackTime + _attackCooldown)
-            return;
+        if (_isAttacking) return;
+        if (Time.time < _lastAttackTime + _attackCooldown) return;
 
         _lastAttackTime = Time.time;
         StartCoroutine(AttackRoutine());
@@ -61,16 +53,24 @@ public class SideScrollPlayerCombat : MonoBehaviour
 
         if (_attackHitbox != null)
         {
-            _attackHitbox.SetDamage(_baseDamage);
+            // Get element from PlayerStats
+            Element element = Element.None;
+            if (PlayerStats.Instance != null && PlayerStats.Instance.Stats != null)
+                element = PlayerStats.Instance.Stats.CharacterElement;
+
+            int damage = _baseDamage;
+            if (PlayerStats.Instance != null && PlayerStats.Instance.Stats != null)
+                damage = PlayerStats.Instance.Stats.BaseDamage;
+
+            _attackHitbox.SetDamage(damage);
+            _attackHitbox.SetElement(element);
             _attackHitbox.EnableHitbox();
         }
 
         yield return new WaitForSeconds(_attackActiveTime);
 
         if (_attackHitbox != null)
-        {
             _attackHitbox.DisableHitbox();
-        }
 
         _isAttacking = false;
     }

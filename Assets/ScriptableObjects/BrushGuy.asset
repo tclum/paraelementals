@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterStats
   CharacterName: Brush Guy
   CharacterSprite: {fileID: 21300000, guid: ad76e712f9d4640cc891b7cbe5de1aba, type: 3}
+  CharacterElement: 2
   HasHealth: 1
   MaxHealth: 10
   HasStamina: 0

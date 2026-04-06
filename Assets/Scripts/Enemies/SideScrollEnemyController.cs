@@ -46,6 +46,14 @@ public class SideScrollEnemyController : MonoBehaviour
             return;
         }
 
+        // Respect elemental status effects
+        ElementalStatus status = GetComponent<ElementalStatus>();
+        if (status != null && status.IsStunned)
+        {
+            _rb.linearVelocity = new Vector2(0f, _rb.linearVelocity.y);
+            return;
+        }
+
         float distance = Vector2.Distance(transform.position, _player.position);
 
         if (distance > _detectionRange)
@@ -60,7 +68,8 @@ public class SideScrollEnemyController : MonoBehaviour
         if (Mathf.Abs(deltaX) > _attackRange)
         {
             float moveDir = Mathf.Sign(deltaX);
-            _rb.linearVelocity = new Vector2(moveDir * _moveSpeed, _rb.linearVelocity.y);
+            float speedMult = status != null ? status.SpeedMultiplier : 1f;
+            _rb.linearVelocity = new Vector2(moveDir * _moveSpeed * speedMult, _rb.linearVelocity.y);
         }
         else
         {

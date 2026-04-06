@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e6db26292e2d048d4aa73e5d415f35f0
+guid: 1cc3318d860ca4415b466ed25e392d83
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7525821412972567675
-    second: SlimeLordWalkinganimation8_0
+      213: 2850767910156068070
+    second: SlimeLordWalkinganimation7_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SlimeLordWalkinganimation8_0
+      name: SlimeLordWalkinganimation7_0
       rect:
         serializedVersion: 2
         x: 24
-        y: 2
+        y: 1
         width: 78
-        height: 124
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b7c124b93b6117860800000000000000
-      internalID: 7525821412972567675
+      spriteID: 6e46fed6f46ff8720800000000000000
+      internalID: 2850767910156068070
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SlimeLordWalkinganimation8_0: 7525821412972567675
+      SlimeLordWalkinganimation7_0: 2850767910156068070
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
