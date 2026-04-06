@@ -17,3 +17,7 @@ MonoBehaviour:
     Stats: {fileID: 11400000, guid: dac9f07c9b5174c06a8c9f0c1444d1fc, type: 2}
     UnlockHint: 
     IsUnlocked: 1
+  - CharacterId: mitty
+    Stats: {fileID: 11400000, guid: 1d947eeefcaa0414692ababe0589be69, type: 2}
+    UnlockHint: 
+    IsUnlocked: 1

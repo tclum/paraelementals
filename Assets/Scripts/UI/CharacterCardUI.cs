@@ -26,8 +26,15 @@ public class CharacterCardUI : MonoBehaviour
         if (_nameText != null)
             _nameText.text = entry.Stats != null ? entry.Stats.CharacterName : entry.CharacterId;
 
+        Debug.Log($"[CardUI] Setup {entry.CharacterId} — image null: {_characterImage == null}, sprite null: {entry.Stats?.CharacterSprite == null}");
         if (_characterImage != null && entry.Stats?.CharacterSprite != null)
+        {
             _characterImage.sprite = entry.Stats.CharacterSprite;
+            _characterImage.color = new Color(1f, 1f, 1f, 1f);
+            _characterImage.preserveAspect = true;
+            _characterImage.enabled = true;
+            _characterImage.gameObject.SetActive(true);
+        }
 
         if (_lockIcon != null)
             _lockIcon.SetActive(!entry.IsUnlocked);
