@@ -17,3 +17,7 @@ MonoBehaviour:
     Stats: {fileID: 11400000, guid: 3acef6ffcf2704b77b99727609bf59a0, type: 2}
     UnlockHint: 
     IsUnlocked: 1
+  - CharacterId: brush_guy
+    Stats: {fileID: 11400000, guid: dac9f07c9b5174c06a8c9f0c1444d1fc, type: 2}
+    UnlockHint: 
+    IsUnlocked: 1
