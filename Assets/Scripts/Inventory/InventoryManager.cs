@@ -14,6 +14,14 @@ public class InventoryManager : MonoBehaviour
 
     private void Awake()
     {
+        if (FindObjectsByType<InventoryManager>(FindObjectsSortMode.None).Length > 1)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        DontDestroyOnLoad(gameObject);
+
         for (int i = 0; i < _maxSlots; i++)
         {
             _slots.Add(new InventorySlot());
