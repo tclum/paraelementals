@@ -22,9 +22,16 @@ public class SideScrollPlayerRespawn : MonoBehaviour
         }
         else
         {
-            // Fallback if no death screen in scene
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+    public static void DestroyPersistentPlayer()
+    {
+        // Find and destroy the DontDestroyOnLoad player so a fresh one spawns
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+            Destroy(player.transform.root.gameObject);
     }
 
     private void OnDestroy()

@@ -65,6 +65,12 @@ public class MainMenuManager : MonoBehaviour
     public void OnPlayClicked()
     {
         Debug.Log("[MainMenu] Play clicked — loading: " + _gameSceneName);
+
+        // Destroy persistent player so a fresh one spawns in HomeBase
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+            Destroy(player.transform.root.gameObject);
+
         StartCoroutine(LoadSceneWithFade(_gameSceneName));
     }
 
