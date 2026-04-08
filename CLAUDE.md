@@ -285,3 +285,46 @@ Each dungeon scene needs:
 - **Spirit Blob** — starter only, stamina only, no combat
 - **Brush Guy** — Water element, HP+Mana, can fight
 - **Mitty** — Wind element, HP+Mana, can fight
+
+---
+
+## Creating Enemy Prefabs (for Claude Code)
+
+### Standard Enemy Setup
+When creating a new enemy prefab, add these components in order:
+1. `Rigidbody2D` — Body Type: Dynamic, Freeze Rotation Z, Gravity Scale: 4
+2. `CapsuleCollider2D` — Size: 0.5 x 1, Direction: Vertical
+3. `Health` — set Max Health
+4. `SideScrollEnemyController` — set moveSpeed, detectionRange, contactDamage
+5. `ElementalEntity` — set element
+6. `LootDropper` — assign ShardPickup prefab, set min/max shards
+7. `SpriteRenderer` on a child `Visual` GameObject
+
+### Visual Child Setup
+- Create child GameObject named `Visual`
+- Add `SpriteRenderer` to Visual
+- Set sprite to generated art asset
+- Scale Visual to match sprite size
+
+### Prefab Save Path
+`Assets/Prefabs/Enemies/[EnemyName].prefab`
+
+### Boss Setup
+Same as enemy plus:
+- Replace `SideScrollEnemyController` with `BossController`
+- Add `ElementalStatus` component
+- Start inactive (SetActive false) — LevelManager activates it
+
+### Spawn Point Setup
+- Create empty GameObject named `SpawnPoint_[N]`
+- Add `EnemySpawnPoint` component
+- Assign enemy prefab to `_enemyPrefab`
+- Set `_spawnCount` (default 3)
+- Set `_spawnOnPlayerProximity` true for Level 2+
+- Position in scene where enemies should spawn
+
+### ShardPickup Prefab Path
+`Assets/Prefabs/Items/ShardPickup.prefab`
+
+### WorldItemPickup Prefab Path  
+`Assets/Prefabs/Items/WorldItemPickup.prefab`
